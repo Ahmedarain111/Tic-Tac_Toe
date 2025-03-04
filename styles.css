@@ -31,6 +31,17 @@ body {
     width: 350px;
     height: 350px;
     background-color: black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.cell {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
 
 button {
