@@ -51,6 +51,11 @@ button {
     font-size: 1.5rem;
     background: none;
     border: none;
-    border-radius: 10px;
-    background-color: rgb(232, 232, 232);
+    border-radius: 6px;
+    background-color: rgb(238, 238, 238);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(224, 224, 224);
 }
