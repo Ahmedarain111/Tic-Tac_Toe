@@ -1,5 +1,6 @@
 const info = document.querySelector('.text');
 const board = document.querySelector('.game-board');
+const restartBtn = document.querySelector('.restart');
 let currentTurn = 'X';
 
 board.childNodes.forEach(cell => {
@@ -16,6 +17,14 @@ board.childNodes.forEach(cell => {
     })
 });
 
+restartBtn.addEventListener('click', () => {
+    board.childNodes.forEach(cell => {
+        cell.textContent = '';
+    })
+    currentTurn = 'X';
+    showTurn();
+});
+
 function showTurn() {
     if(currentTurn === 'X') {
         info.textContent = 'X turn';
@@ -23,5 +32,9 @@ function showTurn() {
         info.textContent = 'O turn';
     }
 }
+
+
+
+
 
 showTurn();
