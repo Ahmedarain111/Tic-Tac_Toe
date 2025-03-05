@@ -4,11 +4,11 @@ let currentTurn = 'X';
 
 board.childNodes.forEach(cell => {
     cell.addEventListener('click', () => {
-        if (currentTurn == 'X') {
+        if (currentTurn == 'X' && cell.textContent == '') {
             cell.textContent = 'X';
             currentTurn = 'O';
         }
-        else {
+        else if (currentTurn == 'O' && cell.textContent == '') {
             cell.textContent = 'O';
             currentTurn = 'X';
         }
